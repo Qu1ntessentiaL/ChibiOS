@@ -4,7 +4,10 @@ set(LIBRARY_NAME chibios-nil)
 set(CHCONF_H_DIR ${CMAKE_SOURCE_DIR}/src/nil)
 
 #Найти все C-файлы в директории
-file(GLOB_RECURSE ALL_C_SOURCES "os/nil/src/*.c")
+file(GLOB_RECURSE ALL_C_SOURCES
+        "os/nil/src/*.c"
+        "os/oslib/src/*.c"
+)
 
 # Исключить некоторые файлы
 # list(REMOVE_ITEM ALL_C_SOURCES
